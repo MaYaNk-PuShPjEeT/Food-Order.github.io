@@ -1,0 +1,63 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.box1::before{
+    content: "";
+    background: url("/pizza-329523_1920.jpg") no-repeat center center/cover;
+    position: absolute;
+    height: 60vh;
+    width: 100%;
+    z-index: -10;
+    opacity: 95%;
+}
+.box1{
+    height: 60vh;
+    border: 2px solid black;
+}
+.head{
+    display: flex;
+    height: 13vh;
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.515);
+}
+.logo img{
+    height: 9vh;
+}
+.logo{
+    color: yellow;
+    text-shadow:2px 2px 1px rgb(53, 53, 237);
+    text-align: center;
+    margin-left: 10px;
+}
+.navbar{
+    display:block;
+    position: absolute;
+    right: 5vw;
+    top: 2vh;
+}
+.navbar ul{
+    margin-top: 2vh;
+    display: flex;
+    list-style: none;
+    justify-items: center;
+    align-items: center;
+}
+.navbar ul li{
+    padding-left: 4em;
+    padding right 4em;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 2em;
+    color: aliceblue;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+.navbar ul li :hover{
+    border:1px solid yellow;
+    background-color: rgb(253, 253, 39);
+}
+.navbar ul li a:hover{
+    color: red;
+}
