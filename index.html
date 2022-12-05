@@ -25,6 +25,7 @@
                     <li><a href="https://www.google.com/" target="_blank">Contact Us</a></li>
                 </ul>
             </div>
+        </div>   
             <div class="intro">
                 <div class="hngry">
                    Hungry?
@@ -34,7 +35,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <div class="box2">
         <div class="srvc">Our Services</div>
         <div class="b2">
@@ -99,4 +99,19 @@
         <button class="sbmt">Submit</button>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+<script>
+    let btn=document.querySelector('button');
+    btn.addEventListener('click',async function(e){
+        e.preventDefault();
+        let name=document.querySelector("input[type='text']").value;
+        let cntact=document.querySelector("input[type='number']").value;
+        let address=document.querySelector("input[type='text']").value;
+        let email=document.querySelector("input[type='email']").value;
+        let tick=document.querySelector("input[type='checkbox']").value;
+
+        let resp = await axios.post('/auth/fdata',{name,cntact,address,email,tick});
+        console.log('resp',resp);
+    })
+</script>
 </html>
