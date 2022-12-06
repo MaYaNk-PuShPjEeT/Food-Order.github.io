@@ -2,41 +2,49 @@
     margin: 0%;
     padding: 0%;
 }
+body{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+}
 .box1::before{
     content: "";
     background: url("pizza-329523_1920.jpg") no-repeat center center/cover;
     position: absolute;
-    height: 65vh;
+    height: 600px;
     width: 100%;
     z-index: -10;
     opacity: 90%;
 }
 .box1{
-    height: 65vh;
+    height: 600px;
+    width: 100%;
 }
 .head{
     display: flex;
-    height: 13vh;
+    position: fixed;
+    height: 110px;
+    width: 100%;
     border-radius: 0.5rem;
     background-color: rgba(0, 0, 0, 0.515);
 }
 .logo img{
-    height: 9vh;
+    height: 80px;
 }
 .logo{
     color: yellow;
     text-shadow:2px 2px 1px rgb(53, 53, 237);
     text-align: center;
-    margin-left: 10px;
+    margin-left: 3%;
 }
 .navbar{
     display:block;
     position: absolute;
-    right: 5vw;
-    top: 2vh;
+    right: 5%;
+    top: 20px;
 }
 .navbar ul{
-    margin-top: 2vh;
+    margin-top: 20px;
     display: flex;
     list-style: none;
     justify-items: center;
@@ -44,11 +52,11 @@
 }
 .navbar ul li{
     padding-left: 4em;
-    padding right 4em;
+    padding right:4em;
 }
 .navbar ul li a{
     text-decoration: none;
-    font-size: 1.7vw;
+    font-size: 27px;
     color: aliceblue;
     font-family: 'Inter', sans-serif;
 }
@@ -62,12 +70,43 @@
     color: rgb(255, 2, 2);
     font-weight: bold;
 }
+@media screen and (max-width : 850px) {
+    .navbar{
+        position:fixed;
+        margin-left: 40%;
+    }
+    .navbar ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+    }
+    .head{
+        height :200px;
+    }
+    .navbar ul li{
+        margin-top: 10px;
+    }
+    .navbar ul li a{
+        font-size: 18px;
+    }
+    .logo{
+        margin-top: 40px;
+    }
+    .box1{
+        width: 100%;
+    }
+    .head{
+        width: 100%;
+    }
+}
 .intro{
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     position: absolute;
-    top: 20vh;
+    top: 280px;
     justify-content: center;
 }
 .hngry{
@@ -87,6 +126,14 @@
     text-shadow: 2px 2px 4px  white;
     padding: 0em 1em;
 }
+@media screen and (max-width : 850px) {
+    .hngry{
+        font-size: 3em;
+    }
+    .soln{
+        font-size: 180%;
+    }
+}
 .box2{
     height: 68vh;
     width: 100%;
@@ -97,6 +144,8 @@
 
 }
 .srvc{
+    display: block;
+    clear: both;
     font-size: 2em;
     margin-top: 1em;
     text-shadow:2px 2px 4px  white ;
@@ -105,7 +154,7 @@
 }
 .b2{
     display: flex;
-    width: 90%;
+    width: 100%;
     height: 55vh;
     flex-direction: row;
     margin: 2em ;
@@ -126,6 +175,26 @@
     width: 7.5em;
     margin-top: 1.5em;
 }
+@media screen and (max-width : 850px) {
+    .b2{
+        display: flex;
+        flex-direction: column;
+        margin-top: 3em;
+        align-items: center;
+    }
+    .box2{
+        height: 85vh;
+    }
+    .ib2{
+        height: 9em;
+        margin-top: 2em;
+    }
+    .ib2 img{
+        height: 3.7em;
+        width: 3.7em;
+        margin-top: 0.7em;
+    }
+}
 .itxt{
     margin-top: 0.7em;
     font-size: 1.3em;
@@ -133,13 +202,14 @@
 .itt{
     align-items: center;
     margin: 1em 1em;
-    font-size: 1.4vw;
+    font-size: 1.4%;
     font-family: cursive;
 }
 .clints{
     display: flex;
     flex-direction: column;
     height: 30vh;
+    width: 100%;
 }
 .clints::before{
     content: "";
@@ -182,7 +252,7 @@ h2{
     margin-top: 15rem;
     display: flex;
     flex-direction: column;
-    width: 70vw;
+    width: 70%;
     margin: auto;
     height:60vh;
 }
@@ -190,7 +260,7 @@ h2{
     content: "";
     background: url("contact-us-2993109_1920.jpg") no-repeat center center/cover;
     position: absolute;
-    width: 70vw;
+    width: 70%;
     margin: auto;
     height:60vh;
     opacity: 40%;
@@ -207,7 +277,7 @@ h2{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    width: 32vw;
+    width: 192%;
     margin: 1rem 2em;
     font-size: 1.3em;
     padding: 0.4em 0.4em;
@@ -215,9 +285,26 @@ h2{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .sbmt{
-    width:7vw;
+    width:7%;
     height: 4vh;
     margin: auto;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
+}
+@media screen and (max-width : 850px) {
+    .ans input{
+        width:100%;
+    }
+    .qn{
+        font-size: 1.5em;
+        width:40%;
+    }
+    .lgo a img{
+        height: 5rem;
+        width: 5rem;
+        margin-top: 0em;
+    }
+    .sbmt{
+        width:19%;
+    }
 }
